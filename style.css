@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Preto */
+    color: #b22222; /* Vermelho */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #000;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid #b22222; /* Vermelho */
+    position: relative;
+}
+
+#update-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+h1, h2 {
+    color: #b22222; /* Vermelho */
+}
+
+button {
+    padding: 0.5rem;
+    border: 1px solid #b22222; /* Vermelho */
+    border-radius: 4px;
+    background-color: #000; /* Preto */
+    color: #b22222; /* Vermelho */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b22222; /* Vermelho */
+    color: #fff; /* Branco */
+}
+
+input, select {
+    padding: 0.5rem;
+    border: 1px solid #b22222; /* Vermelho */
+    border-radius: 4px;
+    background-color: #fff; /* Branco */
+    color: #000; /* Preto */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    color: #b22222; /* Vermelho */
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff; /* Branco */
+    color: #000; /* Preto */
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button {
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    color: darkred;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}

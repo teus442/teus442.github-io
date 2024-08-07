@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Segurança - Indústrias Wayne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gerenciamento de Segurança - Indústrias Wayne</h1>
+        <button id="update-btn" class="small-button">Atualizar</button>
+    </header>
+
+    <div id="top-buttons">
+        <button id="resource-management-btn" class="small-button hidden">Gestão de Recursos</button>
+        <button id="common-access" class="small-button">Acesso</button>
+        <button id="internal-access" class="small-button hidden">Acesso Interno</button>
+    </div>
+
+    <main>
+        <section id="access-section">
+            <h2>Controle de Acesso</h2>
+        </section>
+
+        <section id="login-section" class="hidden">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="login-btn">Entrar</button>
+                <button type="button" id="register-btn">Cadastrar</button>
+            </form>
+            <div class="button-container">
+                <button id="back-to-access">Voltar</button>
+            </div>
+        </section>
+
+        <section id="register-section" class="hidden">
+            <h2>Registrar Novo Usuário</h2>
+            <form id="register-form">
+                <label for="new-username">Usuário:</label>
+                <input type="text" id="new-username" required>
+                <label for="new-password">Senha:</label>
+                <input type="password" id="new-password" required>
+                <label for="user-role">Nível de Acesso:</label>
+                <select id="user-role-select">
+                    <option value="funcionario">Funcionário</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <button type="submit">Registrar</button>
+                <button type="button" id="back-to-login">Voltar para Login</button>
+            </form>
+        </section>
+
+        <section id="common-access-section" class="hidden">
+            <h2>Login de Funcionário</h2>
+            <form id="common-login-form">
+                <label for="common-username">Usuário:</label>
+                <input type="text" id="common-username" name="common-username" required>
+                <label for="common-password">Senha:</label>
+                <input type="password" id="common-password" name="common-password" required>
+                <button type="submit" id="common-login-btn">Entrar</button>
+                <button type="button" id="common-register-btn">Cadastrar</button>
+            </form>
+            <div class="button-container">
+                <button id="back-to-access-common">Voltar</button>
+            </div>
+        </section>
+
+        <section id="common-register-section" class="hidden">
+            <h2>Registrar Novo Usuário</h2>
+            <form id="common-register-form">
+                <label for="common-new-username">Usuário:</label>
+                <input type="text" id="common-new-username" required>
+                <label for="common-new-password">Senha:</label>
+                <input type="password" id="common-new-password" required>
+                <label for="common-user-role">Nível de Acesso:</label>
+                <select id="common-user-role-select">
+                    <option value="funcionario">Funcionário</option>
+                    <option value="gerente">Gerente</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <button type="submit">Registrar</button>
+                <button type="button" id="back-to-login-from-common-register">Voltar para Login</button>
+            </form>
+        </section>
+
+        <section id="dashboard" class="hidden">
+            <h2><BR></BR>Dashboard</h2>
+            <div id="access-control"></div>
+
+            <div id="resource-management" class="hidden">
+                <h3>Gestão de Recursos</h3>
+                <form id="resource-form">
+                    <label for="resource-name">Nome do Recurso:</label>
+                    <input type="text" id="resource-name" required>
+                    <label for="resource-type">Tipo do Recurso:</label>
+                    <input type="text" id="resource-type" required>
+                    <button type="submit">Adicionar Recurso</button>
+                </form>
+                <ul id="resource-list"></ul>
+            </div>
+
+            <div id="internal-access-section" class="hidden">
+                <h3>Acesso Interno</h3>
+                <ul id="user-list"></ul>
+                <button id="register-user-btn">Registrar Usuário</button>
+                <div id="admin-register-section" class="hidden">
+                    <h4>Registrar Funcionário ou Gerente</h4>
+                    <form id="admin-register-form">
+                        <label for="admin-new-username">Usuário:</label>
+                        <input type="text" id="admin-new-username" required>
+                        <label for="admin-new-password">Senha:</label>
+                        <input type="password" id="admin-new-password" required>
+                        <label for="admin-user-role">Nível de Acesso:</label>
+                        <select id="admin-user-role-select">
+                            <option value="funcionario">Funcionário</option>
+                            <option value="gerente">Gerente</option>
+                        </select>
+                        <button type="submit">Registrar</button>
+                        <button type="button" id="back-to-internal-access">Voltar para Acesso Interno</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="logout-button-container">
+                <button id="logout-btn">Deslogar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="java.js"></script>
+</body>
+</html>
